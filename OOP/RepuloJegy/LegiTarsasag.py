@@ -1,5 +1,5 @@
-import BelfoldiJarat
-import NemzetkoziJarat
+from BelfoldiJarat import BelfoldiJarat
+from NemzetkoziJarat import NemzetKozijarat
 
 
 class LegiTarsasag():
@@ -11,10 +11,10 @@ class LegiTarsasag():
 
         self.nev = nev
 
-    def belfoldihozzadasa(self, data):
+    def belfoldihozzadasa(self, *data):
 
-        self.belfoldijaratok.append(BelfoldiJarat(data))
+        self.belfoldijaratok.append(BelfoldiJarat(*data))
 
-    def nemzetkozihozzaadasa(self, data):
+    def nemzetkozihozzaadasa(self, *data):
 
-        self.nemzetkozijaratok.append(NemzetkoziJarat(data))
+        self.nemzetkozijaratok.append(NemzetKozijarat(*data))

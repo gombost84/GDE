@@ -42,6 +42,8 @@ class LegiTarsasag():
 
         self.nemzetkozijaratok.append(NemzetKozijarat(*data))
 
+# class Jegyfoglalas():
+
 
 if __name__ == '__main__':
 
