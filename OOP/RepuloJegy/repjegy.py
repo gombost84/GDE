@@ -8,11 +8,12 @@ def felhasznaloi_felulet():
     jegyfoglalas_rendszer = JegyFoglalas()
     wizzair = LegiTarsasag("WizzAir")
 
-    # Minta járatok hozzáadása
     belfoldi_jarat = BelfoldiJarat("101", "Budapest", 15000)
     nemzetkozi_jarat = NemzetkoziJarat("202", "London", 50000)
+    nemzetkozi_jarat2 = NemzetkoziJarat("303", "Madrid", 50000)
     wizzair.jarat_hozzaadasa(belfoldi_jarat)
     wizzair.jarat_hozzaadasa(nemzetkozi_jarat)
+    wizzair.jarat_hozzaadasa(nemzetkozi_jarat2)
 
     while True:
         print("\n--- Repülőjegy Foglalási Rendszer ---")
@@ -30,7 +31,6 @@ def felhasznaloi_felulet():
             nev = input("Add meg a neved: ")
             jaratszam = input("Add meg a foglalni kívánt járat számát: ")
 
-            # Járat kiválasztása és típusának kezelése
             for jarat in wizzair.jaratok:
                 if jarat.jaratszam == jaratszam:
                     if isinstance(jarat, BelfoldiJarat):

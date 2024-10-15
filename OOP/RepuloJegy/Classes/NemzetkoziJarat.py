@@ -1,4 +1,4 @@
-from Jarat import Jarat
+from Classes.Jarat import Jarat
 
 
 class NemzetkoziJarat(Jarat):
