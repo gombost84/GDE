@@ -1,2 +1,0 @@
-b,100,Debrecen
-n,200,London

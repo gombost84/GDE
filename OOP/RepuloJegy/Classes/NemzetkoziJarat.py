@@ -1,0 +1,10 @@
+from Jarat import Jarat
+
+
+class NemzetkoziJarat(Jarat):
+    def __init__(self, jaratszam, celallomas, jegyar):
+        super().__init__(jaratszam, celallomas, jegyar)
+
+    def jarat_informacio(self):
+        return f"Nemzetközi Járat - {self.jaratszam}: {self.celallomas}, \
+            Ár: {self.jegyar} Ft"
