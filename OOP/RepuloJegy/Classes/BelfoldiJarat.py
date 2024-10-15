@@ -9,5 +9,4 @@ class BelfoldiJarat(Jarat):
 
     def jarat_informacio(self):
 
-        return f"Belföldi Járat - {self.jaratszam}: {self.celallomas}, \
-        Ár: {self.jegyar} Ft"
+        return f"Belföldi Járat - {self.jaratszam}: {self.celallomas}, Ár: {self.jegyar} Ft"

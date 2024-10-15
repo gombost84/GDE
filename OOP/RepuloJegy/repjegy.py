@@ -35,46 +35,42 @@ def felhasznaloi_felulet():
 
         valasz = input("Válassz egy opciót: ")
 
-        if valasz == "1":
-            print("\nElérhető járatok:")
-            print(wizzair)
+        match valasz:
 
-        elif valasz == "2":
-            nev = input("Add meg a neved: ")
-            jaratszam = input("Add meg a foglalni kívánt járat számát: ")
+            case "1":
+                print("\nElérhető járatok:")
+                print(wizzair)
 
-            for jarat in wizzair.jaratok:
+            case "2":
+                nev = input("Add meg a neved: ")
+                jaratszam = input("Add meg a foglalni kívánt járat számát: ")
 
-                if jarat.jaratszam == jaratszam:
+                for jarat in wizzair.jaratok:
 
-                    if isinstance(jarat, BelfoldiJarat):
-                        print(f"Belföldi járatra foglalsz: {jarat.celallomas}")
+                    if jarat.jaratszam == jaratszam:
 
-                    elif isinstance(jarat, NemzetkoziJarat):
-                        print(f"Nemzetközi járatra foglalsz: {jarat.celallomas}")
+                        if isinstance(jarat, BelfoldiJarat):
+                            print(f"Belföldi járatra foglalsz: {jarat.celallomas}")
 
-                    jegyfoglalas_rendszer.foglalas(jarat, nev)
-                    break
+                        elif isinstance(jarat, NemzetkoziJarat):
+                            print(f"Nemzetközi járatra foglalsz: {jarat.celallomas}")
 
-            else:
-                print("Nincs ilyen járat.")
+                        jegyfoglalas_rendszer.foglalas(jarat, nev)
+                        break
 
-        elif valasz == "3":
+            case "3":
+                nev = input("Add meg a neved: ")
+                jaratszam = input("Add meg a lemondani kívánt járat számát: ")
+                jegyfoglalas_rendszer.foglalas_lemondasa(nev, jaratszam)
 
-            nev = input("Add meg a neved: ")
-            jaratszam = input("Add meg a lemondani kívánt járat számát: ")
-            jegyfoglalas_rendszer.foglalas_lemondasa(nev, jaratszam)
+            case "4":
+                print(jegyfoglalas_rendszer)
 
-        elif valasz == "4":
+            case "5":
+                break
 
-            print(jegyfoglalas_rendszer)
-
-        elif valasz == "5":
-
-            break
-
-        else:
-            print("Érvénytelen választás, próbáld újra.")
+            case _:
+                print("\nÉrvénytelen menüpont!")
 
 
 if __name__ == "__main__":

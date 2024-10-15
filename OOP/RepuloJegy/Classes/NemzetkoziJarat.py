@@ -9,5 +9,4 @@ class NemzetkoziJarat(Jarat):
 
     def jarat_informacio(self):
 
-        return f"Nemzetközi Járat - {self.jaratszam}: {self.celallomas}, \
-            Ár: {self.jegyar} Ft"
+        return f"Nemzetközi Járat - {self.jaratszam}: {self.celallomas}, Ár: {self.jegyar} Ft"
